@@ -59,7 +59,7 @@ public class ManagerActivity extends AppCompatActivity
         }else if (id == R.id.nav_upgrade) {
         selectItem(1);
         } else if (id == R.id.nav_time) {
-
+        selectItem(2);
         } else if (id == R.id.nav_share) {
 
         }
@@ -73,6 +73,7 @@ public class ManagerActivity extends AppCompatActivity
         Fragment fragment;
         switch (position) {
             case 1: fragment = new UpgradeFragment(); break;
+            case 2: fragment = new LevelFragment(); break;
             default: fragment = new HomeFragment(); break;
         }
 

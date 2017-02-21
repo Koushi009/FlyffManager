@@ -18,5 +18,11 @@
         <item>Waffe Ultimate</item>
     </string-array>
 
+    <string-array name="areas">
+        <item>Azria</item>
+        <item>Rartesia</item>
+        <item>Dark Rartesia</item>
+    </string-array>
+
 
 </resources>

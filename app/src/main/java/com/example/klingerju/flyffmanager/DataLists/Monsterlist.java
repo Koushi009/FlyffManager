@@ -11,10 +11,12 @@ import java.util.ArrayList;
 
 public class Monsterlist {
 
-    Monsterlist monsterlist;
+    static Monsterlist monsterlist;
     ArrayList<Monster> azriaMonsters = new ArrayList<>();
     ArrayList<Monster> rartesiaMonsters = new ArrayList<>();
     ArrayList<Monster> darkRartesiaMonsters = new ArrayList<>();
+
+    public ArrayList<ArrayList<Monster>> areas = new ArrayList<>();
 
     public Monsterlist() {
         azriaMonsters.add(new Monster(  "Yeti",                             Element.Earth,      73,     31285,0));
@@ -37,10 +39,12 @@ public class Monsterlist {
         darkRartesiaMonsters.add(new Monster("Rabbit Pikeman",              Element.Fire,       141,    260000,0));
         darkRartesiaMonsters.add(new Monster("Rabbit Assassin",             Element.Water,      145,    280000,0));
         darkRartesiaMonsters.add(new Monster("Rabbit Axe",                  Element.Electric,   149,    300000,0));
-
+        areas.add(azriaMonsters);
+        areas.add(rartesiaMonsters);
+        areas.add(darkRartesiaMonsters);
     }
 
-    public Monsterlist getMonsterlist() {
+    public static Monsterlist getMonsterlist() {
         if(monsterlist != null)
         {
             return monsterlist;

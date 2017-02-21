@@ -70,6 +70,15 @@
             android:id="@+id/chance_list"
             android:layout_toLeftOf="@+id/stufe"
             android:layout_toStartOf="@+id/stufe" />
+
+        <TextView
+            android:text="Source: http://www.elitepvpers.com/forum/flyff-main-discussions-questions/704040-flyff-upgrade-rates.html"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/source"
+            android:textSize="8sp" />
     </RelativeLayout>
 
 </FrameLayout>

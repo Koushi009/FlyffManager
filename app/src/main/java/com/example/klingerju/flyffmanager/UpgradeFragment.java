@@ -3,6 +3,7 @@ package com.example.klingerju.flyffmanager;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +47,15 @@ public class UpgradeFragment extends Fragment {
 
         final TextView chanceList = (TextView) view.findViewById(R.id.chance_list);
 
+        ((EditText) view.findViewById(R.id.versuche)).setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(keyCode == KeyEvent.KEYCODE_ENTER) {
+                    calculate();
+                }
+                return false;
+            }
+        });
 
         Spinner itemSelector = (Spinner) view.findViewById(R.id.item_selector);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(view.getContext(),
