@@ -59,4 +59,9 @@ public class Monster {
     public void setExp(int exp) {
         this.exp = exp;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
