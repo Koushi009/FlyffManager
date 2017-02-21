@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Flyff Manager</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_manager">Flyff Manager</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">HOME</string>
+
+    <string-array name="upgrading_items">
+        <item>Schmuck</item>
+        <item>Rüstung Sockeln</item>
+        <item>Rüstung/Waffe upgraden</item>
+        <item>Waffe Sockeln</item>
+        <item>Waffe Element</item>
+        <item>Waffe Ultimate</item>
+    </string-array>
+
+
+</resources>
