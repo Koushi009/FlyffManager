@@ -36,7 +36,7 @@ public class ManagerActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         selectItem(0);
-}
+    }
 
     @Override
     public void onBackPressed() {
@@ -55,26 +55,37 @@ public class ManagerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-        selectItem(0);
-        }else if (id == R.id.nav_upgrade) {
-        selectItem(1);
+            selectItem(0);
+        } else if (id == R.id.nav_upgrade) {
+            selectItem(1);
         } else if (id == R.id.nav_time) {
-        selectItem(2);
+            selectItem(2);
+        }else if (id == R.id.nav_time_easy) {
+            selectItem(3);
         } else if (id == R.id.nav_share) {
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return false;
-    }
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+            return false;
+        }
 
     public void selectItem(int position) {
         Fragment fragment;
         switch (position) {
-            case 1: fragment = new UpgradeFragment(); break;
-            case 2: fragment = new LevelFragment(); break;
-            default: fragment = new HomeFragment(); break;
+            case 1:
+                fragment = new UpgradeFragment();
+                break;
+            case 2:
+                fragment = new LevelFragment();
+                break;
+            case 3:
+                fragment = new LevelEasyFragment();
+                break;
+            default:
+                fragment = new HomeFragment();
+                break;
         }
 
 

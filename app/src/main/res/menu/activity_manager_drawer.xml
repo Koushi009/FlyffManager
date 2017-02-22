@@ -11,9 +11,13 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Upgrade chances" />
         <item
-            android:id="@+id/nav_time"
+        android:id="@+id/nav_time"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="Level helper" />
+        <item
+            android:id="@+id/nav_time_easy"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Level helper" />
+            android:title="Level helper (Easy)" />
     </group>
 
     <item android:title="Support">
