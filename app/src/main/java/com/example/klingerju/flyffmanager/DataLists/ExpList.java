@@ -174,5 +174,10 @@ public class ExpList {
         levels.add(new Level(147, 304780257046L));
         levels.add(new Level(148, 335745931162L));
         levels.add(new Level(149, 369857717768L));
+        levels.add(new Level(150, 554786576652L));
+        levels.add(new Level(151, 832179864978L));
+        levels.add(new Level(152, 1248269797467L));
+        levels.add(new Level(153, 1872404696201L));
+        levels.add(new Level(154, 2808607044301L));
     }
 }
