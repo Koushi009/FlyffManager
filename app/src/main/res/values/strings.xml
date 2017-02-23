@@ -19,6 +19,7 @@
     </string-array>
 
     <string-array name="areas">
+        <item>Tower</item>
         <item>Azria</item>
         <item>Rartesia</item>
         <item>Dark Rartesia</item>

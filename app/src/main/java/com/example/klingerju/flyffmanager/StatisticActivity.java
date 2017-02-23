@@ -41,6 +41,7 @@ public class StatisticActivity extends AppCompatActivity {
     TextView mobsToKillTV;
     TextView estimatedTimeTV;
     TextView timePer5MobsTV;
+    TextView expProMobTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,7 @@ public class StatisticActivity extends AppCompatActivity {
         mobsToKillTV = (TextView) findViewById(R.id.mobs_to_kill);
         estimatedTimeTV = (TextView) findViewById(R.id.estimatedtime);
         timePer5MobsTV = (TextView) findViewById(R.id.timeper5mobs);
+        expProMobTV = (TextView) findViewById(R.id.exppromob);
 
         String isHeroStr = "";
         if(lvl > 120) {
@@ -96,8 +98,8 @@ public class StatisticActivity extends AppCompatActivity {
         mobElementTV.setText("Element: " + monster.getElement().toString());
         mobExpTV.setText("Tötung gibt " + monster.getExp() +" EXP");
 
-        double monsterExp = monster.getExp() * expBonusAmp * expBonusEvent;
-        long mobsToBeKilledNr =Math.round((expNeeded * expBonusLeech) / monsterExp);
+        double monsterExp = monster.getExp() * expBonusAmp * expBonusEvent * expBonusLeech;
+        long mobsToBeKilledNr =Math.round(expNeeded / monsterExp);
         mobsToKillTV.setText("Monster zu töten: " + mobsToBeKilledNr);
 
         int seconds = (int) (milliseconds / 1000);
@@ -115,5 +117,8 @@ public class StatisticActivity extends AppCompatActivity {
         seconds = seconds%60;
         mseconds = (int) (milliseconds % 1000);
         estimatedTimeTV.setText("Zeit für Level-up: " + hours + "h " + String.format("%02d",minutes) + "min " + String.format("%02d", seconds) + "sec");
+
+        double expPercentage = monsterExp * 100 / expNeeded;
+        expProMobTV.setText("EXP pro Tötung in %: " + String.format("%.2f", expPercentage) + "%");
     }
 }
