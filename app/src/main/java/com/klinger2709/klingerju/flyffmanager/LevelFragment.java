@@ -1,4 +1,4 @@
-package com.example.klingerju.flyffmanager;
+package com.klinger2709.klingerju.flyffmanager;
 
 
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.klingerju.flyffmanager.Classes.Monster;
-import com.example.klingerju.flyffmanager.DataLists.ExpList;
-import com.example.klingerju.flyffmanager.DataLists.Monsterlist;
+import com.klinger2709.klingerju.flyffmanager.Classes.Monster;
+import com.klinger2709.klingerju.flyffmanager.DataLists.ExpList;
+import com.klinger2709.klingerju.flyffmanager.DataLists.Monsterlist;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -4,20 +4,13 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_manage"
             android:title="Home" />
         <item
             android:id="@+id/nav_upgrade"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Upgrade chances" />
-        <item
-        android:id="@+id/nav_time"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="Level helper" />
+            android:title="Upgrades " />
         <item
             android:id="@+id/nav_time_easy"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Level helper (Easy)" />
+            android:title="Gemütlich Leveln" />
     </group>
 
     <item android:title="Support">

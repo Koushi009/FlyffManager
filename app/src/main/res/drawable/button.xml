@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:textAllCaps="false">
+        <inset android:insetBottom="5dp" android:insetLeft="5dp" android:insetRight="5dp" android:insetTop="5dp">
+            <shape android:shape="rectangle">
+                <margin android:top="5dp"></margin>
+                <corners android:radius="50dp" />
+                <stroke android:width="0dip" android:color="@color/my_blue" />
+                <gradient android:angle="0" android:endColor="@color/my_light_blue_dark" android:startColor="@color/green_temp" />
+            </shape>
+        </inset>
+    </item>
+    <item android:state_focused="true">
+        <inset android:insetBottom="5dp" android:insetLeft="5dp" android:insetRight="5dp" android:insetTop="5dp">
+            <shape android:shape="rectangle">
+                <margin android:top="5dp"></margin>
+                <corners android:radius="5dp" />
+                <stroke android:width="1dip" android:color="#971E05" />
+                <solid android:color="#58857e" />
+            </shape>
+        </inset>
+    </item>
+    <item>
+        <inset android:insetBottom="5dp" android:insetLeft="5dp" android:insetRight="5dp" android:insetTop="5dp">
+            <shape android:shape="rectangle">
+                <margin android:top="5dp" />
+                <corners android:radius="50dp" />
+                <stroke android:width="0dip" android:color="@color/bright_green" />
+                <gradient android:angle="0" android:endColor="@color/my_light_blue" android:startColor="@color/green_temp" />
+            </shape>
+        </inset>
+    </item>
+</selector>

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.klingerju.flyffmanager.UpgradeFragment">
+    tools:context="com.klinger2709.klingerju.flyffmanager.UpgradeFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -57,6 +57,8 @@
             android:layout_alignLeft="@+id/versuche"
             android:layout_alignStart="@+id/versuche"
             android:id="@+id/calculate_btn"
+            android:background="@drawable/button"
+            android:textAllCaps="false"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 

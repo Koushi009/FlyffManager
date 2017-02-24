@@ -1,4 +1,4 @@
-package com.example.klingerju.flyffmanager;
+package com.klinger2709.klingerju.flyffmanager;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

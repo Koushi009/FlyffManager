@@ -1,7 +1,7 @@
-package com.example.klingerju.flyffmanager.DataLists;
+package com.klinger2709.klingerju.flyffmanager.DataLists;
 
 
-import com.example.klingerju.flyffmanager.Classes.Level;
+import com.klinger2709.klingerju.flyffmanager.Classes.Level;
 
 import java.util.ArrayList;
 

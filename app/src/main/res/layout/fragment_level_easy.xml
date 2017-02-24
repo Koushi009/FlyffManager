@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.klingerju.flyffmanager.LevelEasyFragment">
+    tools:context="com.klinger2709.klingerju.flyffmanager.LevelEasyFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -18,7 +18,11 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
 
-            android:id="@+id/question" />
+            android:id="@+id/question"
+            android:textColor="@color/my_dark_blue"
+            android:textStyle="normal|bold"
+            android:textSize="18sp"
+            android:layout_margin="10dp" />
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

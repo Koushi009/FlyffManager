@@ -1,4 +1,4 @@
-package com.example.klingerju.flyffmanager;
+package com.klinger2709.klingerju.flyffmanager;
 
 import org.junit.Test;
 

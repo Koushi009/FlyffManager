@@ -1,13 +1,13 @@
-package com.example.klingerju.flyffmanager;
+package com.klinger2709.klingerju.flyffmanager;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.klingerju.flyffmanager.Classes.Monster;
-import com.example.klingerju.flyffmanager.DataLists.ExpList;
-import com.example.klingerju.flyffmanager.DataLists.Monsterlist;
+import com.klinger2709.klingerju.flyffmanager.Classes.Monster;
+import com.klinger2709.klingerju.flyffmanager.DataLists.ExpList;
+import com.klinger2709.klingerju.flyffmanager.DataLists.Monsterlist;
 
 public class StatisticActivity extends AppCompatActivity {
 
@@ -93,20 +93,20 @@ public class StatisticActivity extends AppCompatActivity {
         leechTv.setText("EXP durch Leech: " + (expBonusLeech * 100) + "%");
 
         mobNameTV.setText(monster.getName());
-        mobLvlTV.setText("Moblvl: " + monster.getLvl());
+        mobLvlTV.setText("Monsterlevel: " + monster.getLvl());
         mobHpTV.setText("HP: " + monster.getHp());
         mobElementTV.setText("Element: " + monster.getElement().toString());
         mobExpTV.setText("Tötung gibt " + monster.getExp() +" EXP");
 
         double monsterExp = monster.getExp() * expBonusAmp * expBonusEvent * expBonusLeech;
         long mobsToBeKilledNr =Math.round(expNeeded / monsterExp);
-        mobsToKillTV.setText("Monster zu töten: " + mobsToBeKilledNr);
+        mobsToKillTV.setText("Monster zu töten: \t" + mobsToBeKilledNr);
 
         int seconds = (int) (milliseconds / 1000);
         int minutes =seconds / 60;
         seconds = seconds%60;
         int mseconds = (int) (milliseconds % 1000);
-        timePer5MobsTV.setText("Zeit für " +monsterKilled+  " Monster: " + minutes + ":" + String.format("%02d", seconds) + ":" + String.format("%03d", mseconds));
+        timePer5MobsTV.setText("Zeit für " +monsterKilled+  " Monster: \t" + minutes + ":" + String.format("%02d", seconds) + ":" + String.format("%03d", mseconds));
         milliseconds = milliseconds/monsterKilled * mobsToBeKilledNr;
 
         int hours;
@@ -116,9 +116,9 @@ public class StatisticActivity extends AppCompatActivity {
         minutes = minutes % 60;
         seconds = seconds%60;
         mseconds = (int) (milliseconds % 1000);
-        estimatedTimeTV.setText("Zeit für Level-up: " + hours + "h " + String.format("%02d",minutes) + "min " + String.format("%02d", seconds) + "sec");
+        estimatedTimeTV.setText("Zeit für Level-up: \t" + hours + "h " + String.format("%02d",minutes) + "min " + String.format("%02d", seconds) + "sec");
 
         double expPercentage = monsterExp * 100 / expNeeded;
-        expProMobTV.setText("EXP pro Tötung in %: " + String.format("%.2f", expPercentage) + "%");
+        expProMobTV.setText("EXP pro Tötung in %: \t" + String.format("%.2f", expPercentage) + "%");
     }
 }

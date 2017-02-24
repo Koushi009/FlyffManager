@@ -1,4 +1,4 @@
-package com.example.klingerju.flyffmanager.Classes;
+package com.klinger2709.klingerju.flyffmanager.Classes;
 
 /**
  * Created by klingerju on 17.02.2017.
