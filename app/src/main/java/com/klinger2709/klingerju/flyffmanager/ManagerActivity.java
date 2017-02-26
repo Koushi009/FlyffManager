@@ -53,6 +53,8 @@ public class ManagerActivity extends AppCompatActivity
             selectItem(0);
         } else if (id == R.id.nav_upgrade) {
             selectItem(1);
+        } else if (id == R.id.nav_asal) {
+            selectItem(2);
         } else if (id == R.id.nav_time_easy) {
             selectItem(3);
         } else if (id == R.id.nav_share) {
@@ -71,7 +73,7 @@ public class ManagerActivity extends AppCompatActivity
                 fragment = new UpgradeFragment();
                 break;
             case 2:
-                fragment = new LevelFragment();
+                fragment = new AsalFragment();
                 break;
             case 3:
                 fragment = new LevelEasyFragment();

@@ -9,6 +9,9 @@
             android:id="@+id/nav_upgrade"
             android:title="Upgrades " />
         <item
+            android:id="@+id/nav_asal"
+            android:title="Schadensberechnung (Skills)" />
+        <item
             android:id="@+id/nav_time_easy"
             android:title="Gemütlich Leveln" />
     </group>

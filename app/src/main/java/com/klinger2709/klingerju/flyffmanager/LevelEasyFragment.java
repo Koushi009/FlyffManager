@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.text.InputType;
 import android.util.Log;
@@ -131,6 +132,7 @@ public class LevelEasyFragment extends Fragment {
                     lvl = Integer.parseInt(currentLvl.getText().toString());
                     if(lvl > 154) {
                         Toast.makeText(getActivity(), "Das ist zu hoch!", Toast.LENGTH_SHORT).show();
+                        return;
                     }
                     isHero = herocbx.isChecked();
                     try {
@@ -164,6 +166,16 @@ public class LevelEasyFragment extends Fragment {
         optionList.addView(createButton("Ich werd grad gelevelt", 0.4, onClickListener));
     }
 
+    public TextInputLayout createInputText(String hint, Object tag, int inputType, View.OnKeyListener onKeyListener) {
+        TextInputLayout textInputLayout = new TextInputLayout(getActivity());
+        EditText strET = new EditText(getActivity());
+        strET.setInputType(inputType);
+        strET.setHint(hint);
+        strET.setTag(tag);
+        strET.setOnKeyListener(onKeyListener);
+        textInputLayout.addView(strET);
+        return textInputLayout;
+    }
 
     public void askExpEvent() {
         prepareView("Läuft gerade ein EXP-Event?");
@@ -181,15 +193,14 @@ public class LevelEasyFragment extends Fragment {
             }
         };
 
-
-        final EditText other = new EditText(getActivity());
-        other.setInputType(InputType.TYPE_CLASS_NUMBER);
-        other.setHint("Ansonsten Bitte in % angeben.");
-        other.setOnKeyListener(new View.OnKeyListener() {
+        optionList.addView(createButton("Leider nicht...", 1.0, onClickListener));
+        optionList.addView(createButton("2-Fach EXP.", 2.0, onClickListener));
+        optionList.addView(createButton("3-Fach EXP!", 3.0, onClickListener));
+        optionList.addView(createInputText("Ansonsten bitte in % angeben.", "EXP_EVENT_TV", InputType.TYPE_CLASS_NUMBER, new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (keyCode == KeyEvent.KEYCODE_ENTER) {
-                    expFromEvent = Double.parseDouble(other.getText().toString()) / 100;
+                    expFromEvent = Double.parseDouble(((EditText) optionList.findViewWithTag("EXP_EVENT_TV")).getText().toString()) / 100;
                     try {
                         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
@@ -200,12 +211,7 @@ public class LevelEasyFragment extends Fragment {
                 }
                 return false;
             }
-        });
-
-        optionList.addView(createButton("Leider nicht...", 1.0, onClickListener));
-        optionList.addView(createButton("2-Fach EXP.", 2.0, onClickListener));
-        optionList.addView(createButton("3-Fach EXP!", 3.0, onClickListener));
-        optionList.addView(other);
+        }));
     }
 
     public void askScrolls() {
@@ -226,14 +232,16 @@ public class LevelEasyFragment extends Fragment {
             }
         };
 
-        final EditText other = new EditText(getActivity());
-        other.setInputType(InputType.TYPE_CLASS_NUMBER);
-        other.setHint("Ansonsten Bitte in % angeben.");
-        other.setOnKeyListener(new View.OnKeyListener() {
+        optionList.addView(createButton("Nein...",1.0,onClickListener));
+        optionList.addView(createButton("Die eine grüne (50%).",1.5,onClickListener));
+        optionList.addView(createButton("5 stapelbare ES(S) (250%)",2.5,onClickListener));
+        optionList.addView(createButton("5 XR aus dem Cashshop (Lila) (500%)",5.0,onClickListener));
+        optionList.addView(createButton("5 Scrolls of Experience Ultra (1000%)",10.0,onClickListener));
+        optionList.addView(createInputText("Ansonsten bitte in % angeben.", "AMP_TV", InputType.TYPE_CLASS_NUMBER, new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (keyCode == KeyEvent.KEYCODE_ENTER) {
-                    expFromAmp = Double.parseDouble(other.getText().toString()) / 100;
+                    expFromAmp = Double.parseDouble(((EditText) optionList.findViewWithTag("AMP_TV")).getText().toString()) / 100;
                     try {
                         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
@@ -244,14 +252,7 @@ public class LevelEasyFragment extends Fragment {
                 }
                 return false;
             }
-        });
-
-        optionList.addView(createButton("Nein...",1.0,onClickListener));
-        optionList.addView(createButton("Die eine grüne (50%).",1.5,onClickListener));
-        optionList.addView(createButton("5 stapelbare ES(S) (250%)",2.5,onClickListener));
-        optionList.addView(createButton("5 XR aus dem Cashshop (Lila) (500%)",5.0,onClickListener));
-        optionList.addView(createButton("5 Scrolls of Experience Ultra (1000%)",10.0,onClickListener));
-        optionList.addView(other);
+        }));
     }
 
     public void askLevelMethod() {

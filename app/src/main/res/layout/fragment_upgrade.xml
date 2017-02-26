@@ -17,16 +17,22 @@
             android:layout_marginTop="10dp"
             android:id="@+id/item_selector" />
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_stufe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:layout_below="@+id/item_selector"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/stufe"
-            android:hint="aktuelle Stufe"
-            android:inputType="number" />
+            android:layout_alignParentEnd="true">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/stufe"
+                android:hint="aktuelle Stufe"
+                android:inputType="number"/>
+        </android.support.design.widget.TextInputLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,24 +44,29 @@
             android:layout_alignLeft="@+id/calculate_btn"
             android:layout_alignStart="@+id/calculate_btn" />
 
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_versuche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_stufe"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/versuche"
             android:hint="Anzahl Versuche"
-            android:layout_below="@+id/stufe"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
             android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:text="Berechnen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/versuche"
-            android:layout_alignLeft="@+id/versuche"
-            android:layout_alignStart="@+id/versuche"
+            android:layout_below="@+id/layout_versuche"
+            android:layout_alignLeft="@+id/layout_versuche"
+            android:layout_alignStart="@+id/layout_versuche"
             android:id="@+id/calculate_btn"
             android:background="@drawable/button"
             android:textAllCaps="false"
@@ -70,8 +81,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:id="@+id/chance_list"
-            android:layout_toLeftOf="@+id/stufe"
-            android:layout_toStartOf="@+id/stufe" />
+            android:layout_toLeftOf="@+id/layout_stufe"
+            android:layout_toStartOf="@+id/layout_stufe" />
 
         <TextView
             android:text="Source: http://www.elitepvpers.com/forum/flyff-main-discussions-questions/704040-flyff-upgrade-rates.html"

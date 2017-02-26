@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.klinger2709.klingerju.flyffmanager.AsalFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Asalralaaikum oder Hit of Penya?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/question"
+            android:textColor="@color/my_dark_blue"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/question"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/content"></LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
