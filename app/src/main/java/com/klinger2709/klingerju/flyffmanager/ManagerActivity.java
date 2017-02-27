@@ -1,5 +1,6 @@
 package com.klinger2709.klingerju.flyffmanager;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -58,7 +59,18 @@ public class ManagerActivity extends AppCompatActivity
         } else if (id == R.id.nav_time_easy) {
             selectItem(3);
         } else if (id == R.id.nav_share) {
-
+            try {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "Flyff manager");
+                String sAux = "\nHier ist der Link zum neuen Flyffmanager:\n\n";
+                sAux = sAux + "https://play.google.com/apps/testing/com.klinger2709.klingerju.flyffmanager\n\n";
+                sAux = sAux + "Viel Spaß beim Testen!";
+                i.putExtra(Intent.EXTRA_TEXT, sAux);
+                startActivity(Intent.createChooser(i, "Bitte auswählen"));
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -140,6 +140,31 @@ public class AsalFragment extends Fragment {
 
     }
     public void calculateHop() {
+        prepareView("Bitte gib deine entsprechenden Werte ein.");
+        optionList.addView(createInputText("STR-Wert", STR_VALUE, InputType.TYPE_CLASS_NUMBER));
+        optionList.addView(createInputText("Attack-Wert",ATK_VALUE,  InputType.TYPE_CLASS_NUMBER));
+
+        optionList.addView(createButton("Berechnen", 1, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText strET = (EditText) optionList.findViewWithTag(STR_VALUE);
+                EditText atkET = (EditText) optionList.findViewWithTag(ATK_VALUE);
+
+                if(strET.getText().toString().equals("") || atkET.getText().toString().equals("")) {
+                    Toast.makeText(getActivity(), "Mindestens ein Wert fehlt.", Toast.LENGTH_SHORT).show();
+                } else {
+                    str = Integer.parseInt(strET.getText().toString());
+                    atk = Integer.parseInt(atkET.getText().toString());
+
+                    double hopPvP = (str*20)+(atk*2.13)-600;
+                    double hopPvE = hopPvP/0.6;
+
+                    question.setText("HoP vs. Monster:  " + Math.round(hopPvE) + "\nHoP vs. Player: " + Math.round(hopPvP));
+
+                }
+            }
+        }));
+
 
     }
 }
