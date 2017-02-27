@@ -14,6 +14,9 @@
         <item
             android:id="@+id/nav_time_easy"
             android:title="Gemütlich Leveln" />
+        <item
+            android:id="@+id/nav_wcoin"
+            android:title="WCoin/Perin Rechner" />
     </group>
 
     <item android:title="Support">
