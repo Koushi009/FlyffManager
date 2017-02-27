@@ -3,6 +3,7 @@ package com.klinger2709.klingerju.flyffmanager;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,8 @@ public class UpgradeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_upgrade, container, false);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Upgradechance berechnen");
 
         final TextView chanceList = (TextView) view.findViewById(R.id.chance_list);
 

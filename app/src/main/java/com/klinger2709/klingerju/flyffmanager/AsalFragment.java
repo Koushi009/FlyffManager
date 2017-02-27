@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -84,6 +85,8 @@ public class AsalFragment extends Fragment {
         // Inflate the layout for this fragment
 
         view = inflater.inflate(R.layout.fragment_asal, container, false);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Schadensberechnung (Skills)");
 
         optionList = (LinearLayout) view.findViewById(R.id.content);
         question = (TextView) view.findViewById(R.id.question);

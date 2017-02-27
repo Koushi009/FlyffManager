@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Gravity;
@@ -59,6 +60,8 @@ public class LevelEasyFragment extends Fragment {
         // Inflate the layout for this fragment
         this.inflater = inflater;
         view = inflater.inflate(R.layout.fragment_level_easy, container, false);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Gemütlich leveln");
 
         question = (TextView) view.findViewById(R.id.question);
         optionList = (LinearLayout) view.findViewById(R.id.option_list);

@@ -7,7 +7,7 @@
             android:title="Home" />
         <item
             android:id="@+id/nav_upgrade"
-            android:title="Upgrades " />
+            android:title="Upgradechance Rechner" />
         <item
             android:id="@+id/nav_asal"
             android:title="Schadensberechnung (Skills)" />
@@ -16,7 +16,7 @@
             android:title="Gemütlich Leveln" />
         <item
             android:id="@+id/nav_wcoin"
-            android:title="WCoin/Perin Rechner" />
+            android:title="WCoin Rechner" />
     </group>
 
     <item android:title="Support">

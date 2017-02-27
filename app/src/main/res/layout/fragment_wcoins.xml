@@ -11,18 +11,18 @@
 
         <TextView
             android:id="@id/question"
-            android:text="WCoins-Perin Rechner"
+            android:text="Bitte fülle 2 von 3 Feldern aus."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="27dp"
             android:textSize="18sp"
             android:textColor="@color/my_dark_blue"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/layout_kurs"
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/kurs"
-                android:hint="WCoin/Perin Kurs"
+                android:hint="Penya pro 100 Wcoins (in Millionen)"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -60,8 +60,21 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/perin"
-                android:hint="Anzahl WCoins"
+                android:hint="Anzahl Penya (in Millionen)"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:text="fehlenden Wert berechnen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_perin"
+            android:id="@+id/calculate"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     </RelativeLayout>
 </FrameLayout>

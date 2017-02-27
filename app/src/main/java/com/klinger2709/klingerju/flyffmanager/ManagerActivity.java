@@ -21,7 +21,6 @@ public class ManagerActivity extends AppCompatActivity
         setContentView(R.layout.activity_manager);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -58,6 +57,8 @@ public class ManagerActivity extends AppCompatActivity
             selectItem(2);
         } else if (id == R.id.nav_time_easy) {
             selectItem(3);
+        } else if(id == R.id.nav_wcoin) {
+            selectItem(4);
         } else if (id == R.id.nav_share) {
             try {
                 Intent i = new Intent(Intent.ACTION_SEND);
@@ -89,6 +90,9 @@ public class ManagerActivity extends AppCompatActivity
                 break;
             case 3:
                 fragment = new LevelEasyFragment();
+                break;
+            case 4:
+                fragment = new WCoinsFragment();
                 break;
             default:
                 fragment = new HomeFragment();
