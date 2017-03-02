@@ -12,6 +12,9 @@
             android:id="@+id/nav_asal"
             android:title="Schadensberechnung (Skills)" />
         <item
+            android:id="@+id/nav_upgradeScrolls"
+            android:title="Scrollanzahl Rechner"/>
+        <item
             android:id="@+id/nav_time_easy"
             android:title="Gemütlich Leveln" />
         <item

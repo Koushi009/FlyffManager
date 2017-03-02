@@ -55,6 +55,8 @@ public class ManagerActivity extends AppCompatActivity
             selectItem(1);
         } else if (id == R.id.nav_asal) {
             selectItem(2);
+        } else if (id == R.id.nav_upgradeScrolls) {
+            selectItem(5);
         } else if (id == R.id.nav_time_easy) {
             selectItem(3);
         } else if(id == R.id.nav_wcoin) {
@@ -93,6 +95,9 @@ public class ManagerActivity extends AppCompatActivity
                 break;
             case 4:
                 fragment = new WCoinsFragment();
+                break;
+            case 5:
+                fragment = new MoreUpgradesFragment();
                 break;
             default:
                 fragment = new HomeFragment();
