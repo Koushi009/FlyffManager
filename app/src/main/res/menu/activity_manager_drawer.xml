@@ -5,22 +5,37 @@
         <item
             android:id="@+id/nav_home"
             android:title="Home" />
-        <item
-            android:id="@+id/nav_upgrade"
-            android:title="Upgradechance Rechner" />
-        <item
-            android:id="@+id/nav_asal"
-            android:title="Schadensberechnung (Skills)" />
-        <item
-            android:id="@+id/nav_upgradeScrolls"
-            android:title="Scrollanzahl Rechner"/>
-        <item
-            android:id="@+id/nav_time_easy"
-            android:title="Gemütlich Leveln" />
-        <item
-            android:id="@+id/nav_wcoin"
-            android:title="WCoin Rechner" />
+        <item android:title="Upgrades">
+            <menu>
+                <item
+                    android:id="@+id/nav_upgrade"
+                    android:title="Upgradechance" />
+                <item
+                    android:id="@+id/nav_upgradeScrolls"
+                    android:title="Scrollanzahl" />
+            </menu>
+        </item>
+        <item android:title="Charakter">
+            <menu>
+                <item
+                    android:id="@+id/nav_asal"
+                    android:title="Schadensberechnung (Skills)" />
+
+                <item
+                    android:id="@+id/nav_time_easy"
+                    android:title="Gemütlich Leveln" />
+            </menu>
+        </item>
+        <item android:title="Handel">
+            <menu>
+            <item
+                android:id="@+id/nav_wcoin"
+                android:title="WCoin Rechner" />
+            </menu>
+        </item>
+
     </group>
+
 
     <item android:title="Support">
         <menu>
