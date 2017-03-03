@@ -50,7 +50,7 @@ public class MoreUpgradesFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_more_upgrades, container, false);
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Scrollanzahl berechnen");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.calc_scrolls);
 
         Spinner itemSelector = (Spinner) view.findViewById(R.id.item_selector);
         final TextView chanceList = (TextView) view.findViewById(R.id.chance_list);
@@ -93,20 +93,20 @@ public class MoreUpgradesFragment extends Fragment {
 
     public boolean checkValues() {
         if(aktuelleStufeET.getText().toString().equals("") || wunschStufeET.getText().toString().equals("") || wahrscheinlichkeitET.getText().toString().equals("")) {
-            Toast.makeText(getActivity(), "Bitte alle Felder ausfüllen", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), R.string.pls_all_fields, Toast.LENGTH_SHORT).show();
             return  false;
         }
         if(Integer.parseInt(aktuelleStufeET.getText().toString()) > (Integer.parseInt(wunschStufeET.getText().toString()))) {
-            Toast.makeText(getActivity(), "Negativupgrades nicht möglich", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), R.string.not_possible, Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if(Integer.parseInt(aktuelleStufeET.getText().toString()) > chances[currentSelected].length || Integer.parseInt(aktuelleStufeET.getText().toString()) < 0) {
-            Toast.makeText(getActivity(), "Ungültiger Wert", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), R.string.no_valid_value, Toast.LENGTH_SHORT).show();
             return false;
         }
          if(Integer.parseInt(wunschStufeET.getText().toString()) > chances[currentSelected].length ||Integer.parseInt(wunschStufeET.getText().toString()) < 1) {
-             Toast.makeText(getActivity(), "Ungültiger Wert", Toast.LENGTH_SHORT).show();
+             Toast.makeText(getActivity(), R.string.no_valid_value, Toast.LENGTH_SHORT).show();
             return false;
         }
 
@@ -131,7 +131,7 @@ public class MoreUpgradesFragment extends Fragment {
             }
 
             TextView ergebnisTV = (TextView) view.findViewById(R.id.ergebnis);
-            ergebnisTV.setText("Du wirst ca. " + gesamtZahlScrolls + " Scrolls brauchen.");
+            ergebnisTV.setText(getString(R.string.u_will_need) + gesamtZahlScrolls + getString(R.string.need_scrolls));
         }
     }
 

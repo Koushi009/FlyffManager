@@ -43,7 +43,7 @@ public class WCoinsFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_wcoins, container, false);
 
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("WCoin Rechner");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.wc_calc);
 
         optionList = (LinearLayout) view.findViewById(R.id.content);
         question = (TextView) view.findViewById(R.id.question);
@@ -68,9 +68,9 @@ public class WCoinsFragment extends Fragment {
         } catch (Exception e) {
 
         }
-        final String kursString = ((EditText) kursET).getText().toString();
-        final String perinString = ((EditText) perinET).getText().toString();
-        final String wcoinString = ((EditText) wcoinET).getText().toString();
+        final String kursString = kursET.getText().toString();
+        final String perinString = perinET.getText().toString();
+        final String wcoinString = wcoinET.getText().toString();
 
         boolean kursEmpty = kursString.equals("");
         boolean perinEmpty = perinString.equals("");
@@ -78,13 +78,13 @@ public class WCoinsFragment extends Fragment {
 
         if (kursEmpty) {
             if (wcoinEmpty || perinEmpty) {
-                Toast.makeText(getActivity(), "Bitte ergänze ein weiteres Feld.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.pls_fill_in_one_more, Toast.LENGTH_SHORT).show();
             } else {
                 calcKurs(perinString, wcoinString);
             }
         } else if (wcoinEmpty) {
             if (perinEmpty) {
-                Toast.makeText(getActivity(), "Bitte ergänze ein weiteres Feld.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.pls_fill_in_one_more, Toast.LENGTH_SHORT).show();
             } else {
                 calcWCoin(kursString, perinString);
             }
@@ -92,8 +92,8 @@ public class WCoinsFragment extends Fragment {
             calcPerin(kursString, wcoinString);
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Welchen Wert möchtest du berechnen?");
-            String[] options = {"Kurs", "WCoins", "Penya"};
+            builder.setTitle(R.string.what_to_calc);
+            String[] options = {getString(R.string.kurs), getString(R.string.wcs), getString(R.string.peny)};
             builder.setItems(options, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="25dp"
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
     android:orientation="vertical"
@@ -17,7 +17,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="by Glücksklee and Yourfriendlyrm"
+        android:text="@string/by_gl_cksklee_and_yourfriendlyrm"
         android:textColor="@color/my_dark_blue" />
 
 </LinearLayout>

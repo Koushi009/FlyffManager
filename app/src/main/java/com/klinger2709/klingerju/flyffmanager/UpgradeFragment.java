@@ -44,7 +44,7 @@ public class UpgradeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_upgrade, container, false);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Upgradechance berechnen");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.calc_upgrade_chance);
 
         final TextView chanceList = (TextView) view.findViewById(R.id.chance_list);
 
@@ -110,12 +110,12 @@ public class UpgradeFragment extends Fragment {
         double errechneteWahrscheinlichkeit = (1 - Math.pow((1 - wahrscheinlichkeit), anzahlVersuche)) * 100;
 
 
-        String ergebnisText = anzahlVersuche +" Scrolls reichen zu " + Math.round(errechneteWahrscheinlichkeit) + "% für ein Upgrade auf Stufe " + (aktuellesLevel + 1) + " aus." ;
+        String ergebnisText = anzahlVersuche +getString(R.string.scrolls_will_reach_) + Math.round(errechneteWahrscheinlichkeit) + getString(R.string.for_an_upgrade) + (aktuellesLevel + 1) + getString(R.string.aus) ;
         TextView ergebnis = (TextView) view.findViewById(R.id.ergebnis);
         ergebnis.setText(ergebnisText);
     }
 
     public void noCalcPossible() {
-        Toast.makeText(view.getContext(), "Bitte überprüfe die Eingabe", Toast.LENGTH_SHORT).show();
+        Toast.makeText(view.getContext(), R.string.pls_check_input, Toast.LENGTH_SHORT).show();
     }
 }

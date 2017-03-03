@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/aktuelle_stufe"
-                android:hint="Aktuelle Stufe"
+                android:hint="@string/aktuelle_stufe"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/wunschstufe"
-                android:hint="Wunschstufe"
+                android:hint="@string/wunschstufe"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -58,12 +58,12 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/wahrscheinlichkeit"
-                android:hint="Wahrscheinlichkeit (in %)"
+                android:hint="@string/wahrscheinlichkeit_in"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
         <TextView
-            android:text="Upgrade Chancen"
+            android:text="@string/upgrade_chancen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/item_selector"
@@ -73,7 +73,7 @@
             android:id="@+id/calculate_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Berechnen"
+            android:text="@string/berechnen"
             android:layout_below="@+id/layout_wahrscheinlichkeit"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -85,7 +85,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ERGEBNIS"
+            android:text="@string/ergebnis"
             android:id="@+id/ergebnis"
             android:textColor="@color/my_dark_blue"
             android:layout_below="@+id/calculate_btn"

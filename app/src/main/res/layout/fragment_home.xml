@@ -20,7 +20,7 @@
             android:layout_marginTop="20dp" />
 
         <TextView
-            android:text="Schreib mir dazu entweder eine E-Mail an gaming.julian94@gmail.com"
+            android:text="@string/schreib_mir_dazu_entweder_eine_e_mail_an_gaming_julian94_gmail_com"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
@@ -32,7 +32,7 @@
             android:layout_marginTop="18dp" />
 
         <TextView
-            android:text="Oder auf dem Server Murano an"
+            android:text="@string/oder_auf_dem_server_murano_an"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
@@ -42,7 +42,7 @@
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:text="Herzlich Willkommen,\n\ndas ist der erste Entwurf vom Flyff Manager.\n\nSchau doch mal ins Menü und klick Dich durch.\n\nÜber Feedback würde ich mich riesig freuen!"
+            android:text="@string/herzlich_willkommen_n_ndas_ist_der_erste_entwurf_vom_flyff_manager_n_nschau_doch_mal_ins_men_und_klick_dich_durch_n_n_ber_feedback_w_rde_ich_mich_riesig_freuen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
@@ -53,7 +53,7 @@
             android:layout_marginTop="20dp" />
 
         <TextView
-            android:text="Yourfriendlyrm"
+            android:text="@string/yourfriendlyrm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView5"

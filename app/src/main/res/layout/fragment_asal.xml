@@ -9,7 +9,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:text="Asalralaaikum oder Hit of Penya?"
+            android:text="@string/asalralaaikum_oder_hit_of_penya"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"

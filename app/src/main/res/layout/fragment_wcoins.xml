@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@id/question"
-            android:text="Bitte fülle 2 von 3 Feldern aus."
+            android:text="@string/bitte_f_lle_2_von_3_feldern_aus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/kurs"
-                android:hint="Penya pro 100 Wcoins (in Millionen)"
+                android:hint="@string/penya_pro_100_wcoins_in_millionen"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/wcoins"
-                android:hint="Anzahl WCoins"
+                android:hint="@string/anzahl_wcoins"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -60,12 +60,12 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/perin"
-                android:hint="Anzahl Penya (in Millionen)"
+                android:hint="@string/anzahl_penya_in_millionen"
                 android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:text="fehlenden Wert berechnen"
+            android:text="@string/fehlenden_wert_berechnen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout_perin"

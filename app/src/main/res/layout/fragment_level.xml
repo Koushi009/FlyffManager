@@ -26,7 +26,7 @@
             android:id="@+id/monster_chooser" />
 
         <TextView
-            android:text="Monsterdaten"
+            android:text="@string/monsterdaten"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/monster_chooser"
@@ -37,7 +37,7 @@
             android:textStyle="normal|bold" />
 
         <TextView
-            android:text="MonsterLVL"
+            android:text="@string/monsterlvl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/monsterHeadline"
@@ -46,7 +46,7 @@
             android:id="@+id/monster_lvl" />
 
         <TextView
-            android:text="ELEMENT"
+            android:text="@string/element"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/monster_lvl"
@@ -55,7 +55,7 @@
             android:id="@+id/monster_element" />
 
         <TextView
-            android:text="monster HP"
+            android:text="@string/monster_hp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/monster_element"
@@ -70,13 +70,12 @@
             android:id="@+id/current_lvl"
             android:inputType="number"
             android:layout_below="@+id/monster_chooser"
-            android:layout_toRightOf="@+id/monster_lvl"
             android:layout_marginLeft="148dp"
             android:layout_marginStart="148dp"
-            android:hint="aktuelles Level" />
+            android:hint="@string/aktuelles_level" />
 
         <CheckBox
-            android:text="Master/Hero"
+            android:text="@string/master_hero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/current_lvl"
@@ -85,7 +84,7 @@
             android:id="@+id/hero_cbx" />
 
         <CheckBox
-            android:text="Level 1 Leech"
+            android:text="@string/level_1_leech"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/hero_cbx"
@@ -94,7 +93,7 @@
             android:id="@+id/lvl1_leech" />
 
         <TextView
-            android:text="Spielerdaten"
+            android:text="@string/spielerdaten"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/monster_hp"
@@ -129,7 +128,7 @@
             android:layout_alignLeft="@+id/current_lvl"
             android:layout_alignStart="@+id/current_lvl"
             android:id="@+id/bonus_through_amps"
-            android:hint="Bonus durch Scrolls"
+            android:hint="@string/bonus_durch_scrolls"
             android:inputType="numberDecimal" />
 
         <EditText
@@ -140,11 +139,11 @@
             android:layout_alignLeft="@+id/bonus_through_amps"
             android:layout_alignStart="@+id/bonus_through_amps"
             android:id="@+id/bonus_through_event"
-            android:hint="Bonus durch Event"
+            android:hint="@string/bonus_durch_event"
             android:inputType="numberSigned" />
 
         <Button
-            android:text="Analysieren"
+            android:text="@string/analysieren"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/bonus_through_event"

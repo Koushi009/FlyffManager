@@ -86,27 +86,27 @@ public class StatisticActivity extends AppCompatActivity {
 
             }
         }
-        lvlTv.setText("Level: " + lvl + isHeroStr);
-        ampTv.setText("EXP durch Scrolls: " + (expBonusAmp * 100) + "%");
-        expNeededTv.setText("EXP benötigt: " + expNeeded);
-        eventTv.setText("EXP durch Event: " + (expBonusEvent * 100) + "%");
-        leechTv.setText("EXP durch Leech: " + (expBonusLeech * 100) + "%");
+        lvlTv.setText(getString(R.string.lvl) + lvl + isHeroStr);
+        ampTv.setText(getString(R.string.exp_through_scrolls) + (expBonusAmp * 100) + "%");
+        expNeededTv.setText(getString(R.string.exp_needed) + expNeeded);
+        eventTv.setText(getString(R.string.exp_trhough_event) + (expBonusEvent * 100) + "%");
+        leechTv.setText(getString(R.string.exp_through_leech) + (expBonusLeech * 100) + "%");
 
         mobNameTV.setText(monster.getName());
-        mobLvlTV.setText("Monsterlevel: " + monster.getLvl());
-        mobHpTV.setText("HP: " + monster.getHp());
-        mobElementTV.setText("Element: " + monster.getElement().toString());
-        mobExpTV.setText("Tötung gibt " + monster.getExp() +" EXP");
+        mobLvlTV.setText(getString(R.string.mob_ll) + monster.getLvl());
+        mobHpTV.setText(getString(R.string.hp) + monster.getHp());
+        mobElementTV.setText(getString(R.string.element_) + monster.getElement().toString());
+        mobExpTV.setText(getString(R.string.death) + monster.getExp() +" EXP");
 
         double monsterExp = monster.getExp() * expBonusAmp * expBonusEvent * expBonusLeech;
         long mobsToBeKilledNr =Math.round(expNeeded / monsterExp);
-        mobsToKillTV.setText("Monster zu töten: \t" + mobsToBeKilledNr);
+        mobsToKillTV.setText(getString(R.string.mobs_to_kill) + mobsToBeKilledNr);
 
         int seconds = (int) (milliseconds / 1000);
         int minutes =seconds / 60;
         seconds = seconds%60;
         int mseconds = (int) (milliseconds % 1000);
-        timePer5MobsTV.setText("Zeit für " +monsterKilled+  " Monster: \t" + minutes + ":" + String.format("%02d", seconds) + ":" + String.format("%03d", mseconds));
+        timePer5MobsTV.setText(getString(R.string.time_for) +monsterKilled+  getString(R.string.mobs) + minutes + ":" + String.format("%02d", seconds) + ":" + String.format("%03d", mseconds));
         milliseconds = milliseconds/monsterKilled * mobsToBeKilledNr;
 
         int hours;
@@ -116,9 +116,9 @@ public class StatisticActivity extends AppCompatActivity {
         minutes = minutes % 60;
         seconds = seconds%60;
         mseconds = (int) (milliseconds % 1000);
-        estimatedTimeTV.setText("Zeit für Level-up: \t" + hours + "h " + String.format("%02d",minutes) + "min " + String.format("%02d", seconds) + "sec");
+        estimatedTimeTV.setText(getString(R.string.time_for_lvl_up) + hours + "h " + String.format("%02d",minutes) + "min " + String.format("%02d", seconds) + "sec");
 
         double expPercentage = monsterExp * 100 / expNeeded;
-        expProMobTV.setText("EXP pro Tötung in %: \t" + String.format("%.2f", expPercentage) + "%");
+        expProMobTV.setText(getString(R.string.exp_per_kill_in_) + String.format("%.2f", expPercentage) + "%");
     }
 }

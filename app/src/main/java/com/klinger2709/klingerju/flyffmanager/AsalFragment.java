@@ -86,7 +86,7 @@ public class AsalFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_asal, container, false);
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Schadensberechnung (Skills)");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.schadensberechnung_skills));
 
         optionList = (LinearLayout) view.findViewById(R.id.content);
         question = (TextView) view.findViewById(R.id.question);
@@ -102,23 +102,23 @@ public class AsalFragment extends Fragment {
             }
         };
 
-        optionList.addView(createButton("Asalralaaikum", 1, onClickListener));
-        optionList.addView(createButton("Hit of Penya", 2, onClickListener));
+        optionList.addView(createButton(getString(R.string.asal), 1, onClickListener));
+        optionList.addView(createButton(getString(R.string.hop), 2, onClickListener));
 
         return view;
     }
 
 
     public void calculateAsal() {
-        prepareView("Bitte gib deine entsprechenden Werte ein.");
+        prepareView(getString(R.string.pls_fill_in_values));
 
 
 
-        optionList.addView(createInputText("STR-Wert", STR_VALUE, InputType.TYPE_CLASS_NUMBER));
-        optionList.addView(createInputText("MP-Wert",MP_VALUE,  InputType.TYPE_CLASS_NUMBER));
-        optionList.addView(createInputText("Attack-Wert",ATK_VALUE,  InputType.TYPE_CLASS_NUMBER));
+        optionList.addView(createInputText(getString(R.string.str), STR_VALUE, InputType.TYPE_CLASS_NUMBER));
+        optionList.addView(createInputText(getString(R.string.mp),MP_VALUE,  InputType.TYPE_CLASS_NUMBER));
+        optionList.addView(createInputText(getString(R.string.atk),ATK_VALUE,  InputType.TYPE_CLASS_NUMBER));
 
-        optionList.addView(createButton("Berechnen", 1, new View.OnClickListener() {
+        optionList.addView(createButton(getString(R.string.berechnen), 1, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText strET = (EditText) optionList.findViewWithTag(STR_VALUE);
@@ -126,7 +126,7 @@ public class AsalFragment extends Fragment {
                 EditText atkET = (EditText) optionList.findViewWithTag(ATK_VALUE);
 
                 if(strET.getText().toString().equals("") || mpET.getText().toString().equals("") || atkET.getText().toString().equals("")) {
-                    Toast.makeText(getActivity(), "Mindestens ein Wert fehlt.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), R.string.min_1_value_missing, Toast.LENGTH_SHORT).show();
                 } else {
                     str = Integer.parseInt(strET.getText().toString());
                     mp = Integer.parseInt(mpET.getText().toString());
@@ -135,7 +135,7 @@ public class AsalFragment extends Fragment {
                     double asalDmgPvE = ((str*mp/10)  + atk + 3000);
                     double asalDmgPvP = asalDmgPvE * 0.6;
 
-                    question.setText("Asal vs. Monster:  " + Math.round(asalDmgPvE) + "\nAsal vs. Player: " + Math.round(asalDmgPvP));
+                    question.setText(getString(R.string.asalpve) + Math.round(asalDmgPvE) + getString(R.string.asalpvp) + Math.round(asalDmgPvP));
 
                 }
             }
@@ -143,18 +143,18 @@ public class AsalFragment extends Fragment {
 
     }
     public void calculateHop() {
-        prepareView("Bitte gib deine entsprechenden Werte ein.");
-        optionList.addView(createInputText("STR-Wert", STR_VALUE, InputType.TYPE_CLASS_NUMBER));
-        optionList.addView(createInputText("Attack-Wert",ATK_VALUE,  InputType.TYPE_CLASS_NUMBER));
+        prepareView(getString(R.string.pls_fill_in_values));
+        optionList.addView(createInputText(getString(R.string.str), STR_VALUE, InputType.TYPE_CLASS_NUMBER));
+        optionList.addView(createInputText(getString(R.string.atk), ATK_VALUE,  InputType.TYPE_CLASS_NUMBER));
 
-        optionList.addView(createButton("Berechnen", 1, new View.OnClickListener() {
+        optionList.addView(createButton(getString(R.string.berechnen), 1, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText strET = (EditText) optionList.findViewWithTag(STR_VALUE);
                 EditText atkET = (EditText) optionList.findViewWithTag(ATK_VALUE);
 
                 if(strET.getText().toString().equals("") || atkET.getText().toString().equals("")) {
-                    Toast.makeText(getActivity(), "Mindestens ein Wert fehlt.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),  R.string.min_1_value_missing, Toast.LENGTH_SHORT).show();
                 } else {
                     str = Integer.parseInt(strET.getText().toString());
                     atk = Integer.parseInt(atkET.getText().toString());
@@ -162,7 +162,7 @@ public class AsalFragment extends Fragment {
                     double hopPvP = (str*20)+(atk*2.13)-600;
                     double hopPvE = hopPvP/0.6;
 
-                    question.setText("HoP vs. Monster:  " + Math.round(hopPvE) + "\nHoP vs. Player: " + Math.round(hopPvP));
+                    question.setText(getString(R.string.hoppve) + Math.round(hopPvE) + getString(R.string.hoppvm) + Math.round(hopPvP));
 
                 }
             }

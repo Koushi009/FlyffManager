@@ -34,7 +34,7 @@
                     style="@style/Base.TextAppearance.AppCompat.Headline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Charakterdaten"
+                    android:text="@string/charakterdaten"
                     android:textColor="@color/my_light_blue_dark"
                     android:textAlignment="center" />
                 <TextView
@@ -42,35 +42,35 @@
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Level" />
+                    android:text="@string/level" />
 
                 <TextView
                     android:id="@+id/expbonus_amps"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="AMPS" />
+                    android:text="@string/amps" />
 
                 <TextView
                     android:id="@+id/expbonus_event"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="EVENT" />
+                    android:text="@string/event" />
 
                 <TextView
                     android:id="@+id/exp_needed"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="EXP NEED" />
+                    android:text="@string/exp_need" />
 
                 <TextView
                     android:id="@+id/leech"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="LEECH" />
+                    android:text="@string/leech" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -92,7 +92,7 @@
                     style="@style/Base.TextAppearance.AppCompat.Headline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Monsterinformationen"
+                    android:text="@string/monsterinformationen"
                     android:textColor="@color/my_light_blue_dark"
                     android:textAlignment="center" />
 
@@ -101,31 +101,28 @@
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="MOBNAMe" />
+                    android:text="@string/mobname" />
 
                 <TextView
                     android:id="@+id/moblvl"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="MOBLVL" />
+                    android:text="@string/moblvl" />
 
                 <TextView
                     android:id="@+id/mobhp"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/moblvl"
-                    android:text="MOBHP" />
+                    android:text="@string/mobhp" />
 
                 <TextView
                     android:id="@+id/mobelement"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="MOB ELE" />
+                    android:text="@string/mob_ele" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -149,7 +146,7 @@
                         style="@style/Base.TextAppearance.AppCompat.Headline"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Auswertung"
+                        android:text="@string/auswertung"
                         android:textColor="@color/my_light_blue_dark"
                         android:textAllCaps="false"
                         android:textAlignment="center" />
@@ -159,7 +156,7 @@
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="MOBSKILL"
+                    android:text="@string/mobskill"
                     android:textStyle="normal|bold"
                     android:textColor="@color/my_dark_blue" />
 
@@ -168,14 +165,14 @@
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="MOBEXP" />
+                    android:text="@string/mobexp" />
 
                 <TextView
                     android:id="@+id/estimatedtime"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ESTIMATEDTIME"
+                    android:text="@string/estimatedtime"
                     android:textColor="@color/my_dark_blue"
                     android:textStyle="normal|bold" />
 
@@ -184,14 +181,14 @@
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TIMEPER5MOBS" />
+                    android:text="@string/timeper5mobs" />
 
                 <TextView
                     android:id="@+id/exppromob"
                     style="@style/Base.TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="EXPPROMOB" />
+                    android:text="@string/exppromob" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>

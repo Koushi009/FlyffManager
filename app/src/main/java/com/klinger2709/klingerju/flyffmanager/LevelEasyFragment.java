@@ -61,7 +61,7 @@ public class LevelEasyFragment extends Fragment {
         this.inflater = inflater;
         view = inflater.inflate(R.layout.fragment_level_easy, container, false);
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Gemütlich leveln");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.gem_tlich_leveln));
 
         question = (TextView) view.findViewById(R.id.question);
         optionList = (LinearLayout) view.findViewById(R.id.option_list);
@@ -103,7 +103,7 @@ public class LevelEasyFragment extends Fragment {
     }
 
     public void askMobGroup() {
-        prepareView("Welches Monster tötest du gerade?");
+        prepareView(getString(R.string.whichmonster));
         final ArrayList<Monster> monsters = Monsterlist.getMonsterlist().areas.get(areaSelected);
         int i = 0;
         for (Monster m : monsters) {
@@ -120,21 +120,21 @@ public class LevelEasyFragment extends Fragment {
     }
 
     public void askLevel() {
-        prepareView("Welches Level bist du momentan?");
+        prepareView(getString(R.string.whichlvl));
         final EditText currentLvl = new EditText(getActivity());
         final CheckBox herocbx = new CheckBox(getActivity());
-        herocbx.setText("Ich bin sogar schon Master/Hero!");
+        herocbx.setText(R.string.im_hero);
         currentLvl.setInputType(InputType.TYPE_CLASS_NUMBER);
         optionList.addView(currentLvl);
         optionList.addView(herocbx);
 
-        optionList.addView(createButton("Weiter", 0, new View.OnClickListener() {
+        optionList.addView(createButton(getString(R.string.next), 0, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!currentLvl.getText().toString().equals("")) {
                     lvl = Integer.parseInt(currentLvl.getText().toString());
                     if(lvl > 154) {
-                        Toast.makeText(getActivity(), "Das ist zu hoch!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), R.string.too_high, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     isHero = herocbx.isChecked();
@@ -146,7 +146,7 @@ public class LevelEasyFragment extends Fragment {
                     }
                     askLeech();
                 } else {
-                    Toast.makeText(getActivity(), "Bitte trage ein Level ein.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), R.string.pls_fill_in_lvl, Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -154,7 +154,7 @@ public class LevelEasyFragment extends Fragment {
     }
 
     public void askLeech() {
-        prepareView("Hast du einen Leecher?");
+        prepareView(getString(R.string.have_leech));
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
@@ -163,10 +163,10 @@ public class LevelEasyFragment extends Fragment {
                 askExpEvent();
             }
         };
-        optionList.addView(createButton("Ja hab ich!", 1.8, onClickListener));
-        optionList.addView(createButton("Nein ich war zu faul mir einen zu suchen.", 1.0, onClickListener));
-        optionList.addView(createButton("Der ist sogar Level 1!", 2.0, onClickListener));
-        optionList.addView(createButton("Ich werd grad gelevelt", 0.4, onClickListener));
+        optionList.addView(createButton(getString(R.string.yes), 1.8, onClickListener));
+        optionList.addView(createButton(getString(R.string.no_leech), 1.0, onClickListener));
+        optionList.addView(createButton(getString(R.string.lvl_1_leech), 2.0, onClickListener));
+        optionList.addView(createButton(getString(R.string.getting_leveled), 0.4, onClickListener));
     }
 
     public TextInputLayout createInputText(String hint, Object tag, int inputType, View.OnKeyListener onKeyListener) {
@@ -181,7 +181,7 @@ public class LevelEasyFragment extends Fragment {
     }
 
     public void askExpEvent() {
-        prepareView("Läuft gerade ein EXP-Event?");
+        prepareView(getString(R.string.is_exp_event));
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -196,10 +196,10 @@ public class LevelEasyFragment extends Fragment {
             }
         };
 
-        optionList.addView(createButton("Leider nicht...", 1.0, onClickListener));
-        optionList.addView(createButton("2-Fach EXP.", 2.0, onClickListener));
-        optionList.addView(createButton("3-Fach EXP!", 3.0, onClickListener));
-        optionList.addView(createInputText("Ansonsten bitte in % angeben.", "EXP_EVENT_TV", InputType.TYPE_CLASS_NUMBER, new View.OnKeyListener() {
+        optionList.addView(createButton(getString(R.string.no_exp_event), 1.0, onClickListener));
+        optionList.addView(createButton(getString(R.string.exp_times_2), 2.0, onClickListener));
+        optionList.addView(createButton(getString(R.string.exp_times_3), 3.0, onClickListener));
+        optionList.addView(createInputText(getString(R.string.exp_in_), "EXP_EVENT_TV", InputType.TYPE_CLASS_NUMBER, new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (keyCode == KeyEvent.KEYCODE_ENTER) {
@@ -218,7 +218,7 @@ public class LevelEasyFragment extends Fragment {
     }
 
     public void askScrolls() {
-        prepareView("Hast du gerade EXP-Scrolls aktiv?");
+        prepareView(getString(R.string.have_exp_scrolls));
 
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -235,12 +235,12 @@ public class LevelEasyFragment extends Fragment {
             }
         };
 
-        optionList.addView(createButton("Nein...",1.0,onClickListener));
-        optionList.addView(createButton("Die eine grüne (50%).",1.5,onClickListener));
-        optionList.addView(createButton("5 stapelbare ES(S) (250%)",2.5,onClickListener));
-        optionList.addView(createButton("5 XR aus dem Cashshop (Lila) (500%)",5.0,onClickListener));
-        optionList.addView(createButton("5 Scrolls of Experience Ultra (1000%)",10.0,onClickListener));
-        optionList.addView(createInputText("Ansonsten bitte in % angeben.", "AMP_TV", InputType.TYPE_CLASS_NUMBER, new View.OnKeyListener() {
+        optionList.addView(createButton(getString(R.string.no_scrolls),1.0,onClickListener));
+        optionList.addView(createButton(getString(R.string.scroll_50),1.5,onClickListener));
+        optionList.addView(createButton(getString(R.string.scroll_250),2.5,onClickListener));
+        optionList.addView(createButton(getString(R.string.scroll_500),5.0,onClickListener));
+        optionList.addView(createButton(getString(R.string.scroll_1000),10.0,onClickListener));
+        optionList.addView(createInputText(getString(R.string.exp_in_), "AMP_TV", InputType.TYPE_CLASS_NUMBER, new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (keyCode == KeyEvent.KEYCODE_ENTER) {
@@ -259,7 +259,7 @@ public class LevelEasyFragment extends Fragment {
     }
 
     public void askLevelMethod() {
-        prepareView("Auf welche Art levelst du?");
+        prepareView(getString(R.string.level_art));
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -270,20 +270,20 @@ public class LevelEasyFragment extends Fragment {
                 }
             }
         };
-        optionList.addView(createButton("1 vs 1",1,onClickListener));
-        optionList.addView(createButton("AoE - Mehrere Monster auf einmal",2,onClickListener));
+        optionList.addView(createButton(getString(R.string.one_vs_one),1,onClickListener));
+        optionList.addView(createButton(getString(R.string.aoe),2,onClickListener));
     }
 
     public void setup1o1() {
-        prepareView("Du levelst 1o1. Bitte starte den Timer und töte dann 5 Monster.");
+        prepareView(getString(R.string.leveling_1o1_kill5));
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if ((int) v.getTag() == 1) {
-                    question.setText("Töte 5 Monster und stoppe dann den Timer");
+                    question.setText(R.string.kill_5_monster_stop);
                     v.setTag(2);
-                    ((Button) v).setText("Timer stop");
+                    ((Button) v).setText(R.string.stop_timer);
                     startTimer();
                 } else if ((int) v.getTag() == 2) {
                     monstersKilled = 5;
@@ -298,22 +298,22 @@ public class LevelEasyFragment extends Fragment {
         timer.setTextSize(22);
         timer.setTextColor(getResources().getColor(R.color.my_dark_blue));
 
-        optionList.addView(createButton("Timer starten", 1, onClickListener));
+        optionList.addView(createButton(getString(R.string.start_timer), 1, onClickListener));
         optionList.addView(timer);
 
     }
 
     public void setupAoE() {
-        prepareView("Du levelst AoE. Bitte zähle die Monster und stoppe einen AoE lang die Zeit.");
+        prepareView(getString(R.string.leveling_aoe));
 
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if ((int) v.getTag() == 1) {
-                    question.setText("Drücke Stop sobald alle gesammelten Monster tot sind. Vergiss nicht mitzuzählen!");
+                    question.setText(R.string.stop_and_count);
                     v.setTag(2);
-                    ((Button) v).setText("Timer stop");
+                    ((Button) v).setText(R.string.stop_timer);
                     startTimer();
                 } else if ((int) v.getTag() == 2) {
                     stopTimer(2);
@@ -326,16 +326,16 @@ public class LevelEasyFragment extends Fragment {
         timer.setTextSize(22);
         timer.setTextColor(getResources().getColor(R.color.my_dark_blue));
 
-        optionList.addView(createButton("Timer starten", 1, onClickListener));
+        optionList.addView(createButton(getString(R.string.start_timer), 1, onClickListener));
         optionList.addView(timer);
     }
 
     public void AskHowManyMonsters() {
-        prepareView("Wie viele Monster hast du gerade getötet?");
+        prepareView(getString(R.string.how_many_mobs));
 
         final EditText other = new EditText(getActivity());
         other.setInputType(InputType.TYPE_CLASS_NUMBER);
-        other.setHint("Anzahl getöter Monster");
+        other.setHint(R.string.anzahl_monster);
         other.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -362,7 +362,7 @@ public class LevelEasyFragment extends Fragment {
         };
 
         optionList.addView(other);
-        optionList.addView(createButton("Fertig", 1, onClickListener));
+        optionList.addView(createButton(getString(R.string.finish), 1, onClickListener));
 
     }
 

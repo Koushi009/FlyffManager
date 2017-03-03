@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/stufe"
-                android:hint="aktuelle Stufe"
+                android:hint="@string/aktuelle_stufe"
                 android:inputType="number"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -56,12 +56,12 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/versuche"
-            android:hint="Anzahl Schutzrollen"
+            android:hint="@string/anzahl_schutzrollen"
             android:inputType="number" />
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:text="Berechnen"
+            android:text="@string/berechnen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout_versuche"
@@ -74,7 +74,7 @@
             android:layout_alignParentEnd="true" />
 
         <TextView
-            android:text="TextView"
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/item_selector"
@@ -85,7 +85,7 @@
             android:layout_toStartOf="@+id/layout_stufe" />
 
         <TextView
-            android:text="Source: http://www.elitepvpers.com/forum/flyff-main-discussions-questions/704040-flyff-upgrade-rates.html"
+            android:text="@string/source_http_www_elitepvpers_com_forum_flyff_main_discussions_questions_704040_flyff_upgrade_rates_html"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

@@ -4,45 +4,45 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="Home" />
-        <item android:title="Upgrades">
+            android:title="@string/home" />
+        <item android:title="@string/upgrades">
             <menu>
                 <item
                     android:id="@+id/nav_upgrade"
-                    android:title="Upgradechance" />
+                    android:title="@string/upgradechance" />
                 <item
                     android:id="@+id/nav_upgradeScrolls"
-                    android:title="Scrollanzahl" />
+                    android:title="@string/scrollanzahl" />
             </menu>
         </item>
-        <item android:title="Charakter">
+        <item android:title="@string/charakter">
             <menu>
                 <item
                     android:id="@+id/nav_asal"
-                    android:title="Schadensberechnung (Skills)" />
+                    android:title="@string/schadensberechnung_skills" />
 
                 <item
                     android:id="@+id/nav_time_easy"
-                    android:title="Gemütlich Leveln" />
+                    android:title="@string/gem_tlich_leveln" />
             </menu>
         </item>
-        <item android:title="Handel">
+        <item android:title="@string/handel">
             <menu>
             <item
                 android:id="@+id/nav_wcoin"
-                android:title="WCoin Rechner" />
+                android:title="@string/wcoin_rechner" />
             </menu>
         </item>
 
     </group>
 
 
-    <item android:title="Support">
+    <item android:title="@string/support">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/share" />
         </menu>
     </item>
 

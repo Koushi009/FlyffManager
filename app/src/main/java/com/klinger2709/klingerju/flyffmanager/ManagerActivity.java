@@ -66,11 +66,11 @@ public class ManagerActivity extends AppCompatActivity
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
                 i.putExtra(Intent.EXTRA_SUBJECT, "Flyff manager");
-                String sAux = "\nHier ist der Link zum neuen Flyffmanager:\n\n";
-                sAux = sAux + "https://play.google.com/apps/testing/com.klinger2709.klingerju.flyffmanager\n\n";
-                sAux = sAux + "Viel Spaß beim Testen!";
+                String sAux = getString(R.string.link_to_app);
+                sAux = sAux + getString(R.string.link);
+                sAux = sAux + getString(R.string.have_fun_testing);
                 i.putExtra(Intent.EXTRA_TEXT, sAux);
-                startActivity(Intent.createChooser(i, "Bitte auswählen"));
+                startActivity(Intent.createChooser(i, getString(R.string.pls_choose)));
             } catch(Exception e) {
                 e.printStackTrace();
             }
