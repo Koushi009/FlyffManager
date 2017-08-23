@@ -18,7 +18,7 @@
     <string name="charakter">Charakter</string>
     <string name="home">Home</string>
     <string name="share">Share</string>
-    <string name="by_gl_cksklee_and_yourfriendlyrm">by Glücksklee and Yourfriendlyrm</string>
+    <string name="by_gl_cksklee_and_yourfriendlyrm">by Glücksklee and Löwentatze</string>
     <string name="aktuelle_stufe">Aktuelle Stufe</string>
     <string name="wunschstufe">Wunschstufe</string>
     <string name="wahrscheinlichkeit_in">Wahrscheinlichkeit (in %)</string>
@@ -27,7 +27,7 @@
     <string name="ergebnis">ERGEBNIS</string>
     <string name="charakterdaten">Charakterdaten</string>
     <string name="level">Level</string>
-    <string name="amps">AMPS</string>
+    <string name="amps" translatable="false">AMPS</string>
     <string name="event">EVENT</string>
     <string name="exp_need">EXP NEED</string>
     <string name="leech">LEECH</string>
@@ -60,13 +60,13 @@
     <string name="analysieren">Analysieren</string>
     <string name="in_welchem_gebiet_levelst_du">In welchem Gebiet levelst du?</string>
     <string name="anzahl_schutzrollen">Anzahl Schutzrollen</string>
-    <string name="source_http_www_elitepvpers_com_forum_flyff_main_discussions_questions_704040_flyff_upgrade_rates_html">Source: http://www.elitepvpers.com/forum/flyff-main-discussions-questions/704040-flyff-upgrade-rates.html</string>
+    <string name="source_http_www_elitepvpers_com_forum_flyff_main_discussions_questions_704040_flyff_upgrade_rates_html" translatable="false">Source: http://www.elitepvpers.com/forum/flyff-main-discussions-questions/704040-flyff-upgrade-rates.html</string>
     <string name="bitte_f_lle_2_von_3_feldern_aus">Bitte fülle 2 von 3 Feldern aus.</string>
     <string name="penya_pro_100_wcoins_in_millionen">Penya pro 100 Wcoins (in Millionen)</string>
     <string name="anzahl_wcoins">Anzahl WCoins</string>
     <string name="anzahl_penya_in_millionen">Anzahl Penya (in Millionen)</string>
     <string name="fehlenden_wert_berechnen">fehlenden Wert berechnen</string>
-    <string name="asal">Asalralaaikum</string>
+    <string name="asal" translatable="false">Asalralaaikum</string>
     <string name="hop">Hit of Penya</string>
     <string name="pls_fill_in_values">Bitte gib deine entsprechenden Werte ein.</string>
     <string name="str">STR-Wert</string>
@@ -89,12 +89,12 @@
     <string name="lvl_1_leech">Der ist sogar Level 1!</string>
     <string name="getting_leveled">Ich werd grad gelevelt</string>
     <string name="is_exp_event">Läuft gerade ein EXP-Event?</string>
-    <string name="no_exp_event">Leider nicht...</string>
+    <string name="no_exp_event">Leider nicht&#8230;</string>
     <string name="exp_times_2">2-Fach EXP.</string>
     <string name="exp_times_3">3-Fach EXP!</string>
     <string name="exp_in_">Ansonsten bitte in % angeben.</string>
     <string name="have_exp_scrolls">Hast du gerade EXP-Scrolls aktiv?</string>
-    <string name="no_scrolls">Nein...</string>
+    <string name="no_scrolls">Nein&#8230;</string>
     <string name="scroll_50">Die eine grüne (50%).</string>
     <string name="scroll_250">5 stapelbare ES(S) (250%)</string>
     <string name="scroll_500">5 XR aus dem Cashshop (Lila) (500%)</string>
@@ -113,7 +113,7 @@
     <string name="finish">Fertig</string>
     <string name="link_to_app">\nHier ist der Link zum neuen Flyffmanager:\n\n</string>
     <string name="have_fun_testing">Viel Spaß beim Testen!</string>
-    <string name="link">https://play.google.com/apps/testing/com.klinger2709.klingerju.flyffmanager\n\n</string>
+    <string name="link" translatable="false">https://play.google.com/apps/testing/com.klinger2709.klingerju.flyffmanager\n\n</string>
     <string name="pls_choose">Bitte auswählen</string>
     <string name="pls_all_fields">Bitte alle Felder ausfüllen</string>
     <string name="not_possible">Negativupgrades nicht möglich</string>
